@@ -1,3 +1,19 @@
+// import { defineConfig } from "vite";
+// import react from "@vitejs/plugin-react";
+// import path from "path";
+// import tailwindcss from "@tailwindcss/vite";
+
+// export default defineConfig({
+//   plugins: [react(), tailwindcss()],
+//   resolve: {
+//     alias: {
+//       "@": path.resolve(__dirname, "./src"),
+//     },
+//     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"], // 👈 add this
+//   },
+// });
+
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -8,7 +24,9 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "@components": path.resolve(__dirname, "./src/Components"), // ✅ ADD THIS
     },
-    extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"], // 👈 add this
+    extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
   },
 });
+
